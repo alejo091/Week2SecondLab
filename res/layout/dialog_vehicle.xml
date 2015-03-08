@@ -10,7 +10,7 @@
 	    android:orientation="vertical"
 	    android:paddingLeft="8dip" 
 	    android:paddingRight="8dip"
-	    android:paddingBottom="8dip">
+	    android:paddingBottom="8dip" android:weightSum="1" android:id="@+id/mylayout">
 	    
 	    <TextView
             android:layout_width="fill_parent"
@@ -40,10 +40,37 @@
             android:inputType="numberDecimal"
             android:digits="0123456789.,"
             />
-        
-	</LinearLayout>
-	
-	<LinearLayout 
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:text="@string/vehicle_brand_label"
+                android:id="@+id/labelVehicleBrand" android:layout_gravity="center_horizontal"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textVehicleBrand"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="@string/vehicle_plate_label"
+                android:id="@+id/labelVehiclePlate" android:layout_gravity="right"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textVehiclePlate"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="@string/vehicle_type_label"
+                android:id="@+id/labelVehicleType" android:layout_gravity="center_horizontal"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textVehicleType"/>
+
+    </LinearLayout>
+
+    <LinearLayout
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
 	    android:orientation="horizontal"
@@ -57,10 +84,10 @@
             android:layout_height="wrap_content" 
             android:text="@string/ok_label" 
             />
-        
-        <Button 
+
+        <Button
             android:id="@+id/buttonCancel" 
-            android:layout_width="120dp" 
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" 
             android:text="@string/cancel_label" 
             />
